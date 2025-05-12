@@ -10,7 +10,7 @@ int bof(FILE *badfile)
 {
     char buffer[BUF_SIZE];
     /* The following statement has a buffer overflow problem */
-    fread(buffer, sizeof(char), 300, badfile);
+    fread(buffer, sizeof(char), 40, badfile);
     return 1;
 }
 int main(int argc, char **argv)
